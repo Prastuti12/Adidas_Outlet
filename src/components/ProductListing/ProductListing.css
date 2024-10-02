@@ -1,0 +1,20 @@
+.ProductListing{
+    display: grid;
+    gap: 16px; /* Spacing between cards */
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    padding: 45px;
+}
+
+@media (max-width: 768px) {
+    /* Mobile devices (up to 768px width) */
+    .ProductListing{
+      grid-template-columns: repeat(2, 1fr); /* Show two cards in a row */
+    }
+  }
+  
+  @media (min-width: 769px) {
+    /* Tablets and desktops (769px and above) */
+    .ProductListing{
+      grid-template-columns: repeat(4, 1fr); /* Show four cards in a row */
+    }
+  }

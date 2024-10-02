@@ -1,0 +1,57 @@
+.section1 {
+    padding: 10px 0px;
+}
+
+.heading {
+    padding: 0px 45px;
+    margin-bottom: 130px; /* Reduce margin bottom to avoid overlap */
+    position: relative; /* Ensure relative positioning */
+    z-index: 1; /* Bring heading above other elements */
+}
+
+.main_heading {
+    font-weight: 700;
+    font-size: 45px;
+}
+
+.cardSection {
+    display: flex;
+    gap: 5px;
+    padding: 0px 45px;
+    background-color: #00a3cf; 
+
+    position: relative; /* Ensure relative positioning */
+      height: "10vh"
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .heading {
+        padding: 0px 20px; /* Reduce padding for mobile */
+        margin-bottom: 10px; /* Ensure no overlap */
+        z-index: 1; /* Bring heading above other elements */
+    }
+
+    .main_heading {
+        font-size: 30px; /* Decrease font size for mobile */
+        text-align: center; /* Center the heading */
+    }
+
+    .cardSection {
+        padding: 0px 20px; /* Reduce padding for mobile */
+        gap: 10px; /* Add some space between cards */
+        height: max-content;
+        overflow-x: auto; /* Allow horizontal scrolling */
+        overflow-y: hidden; /* Prevent vertical scrolling */
+    }
+
+    .cardSection > div {
+        min-width: 150px; /* Set a minimum width for cards */
+        flex: 0 0 auto; /* Prevent flex items from shrinking */
+        margin-bottom: 10px; /* Space between cards */
+    }
+    .cardContent{
+        margin-top:0px !important;
+
+    }
+}
