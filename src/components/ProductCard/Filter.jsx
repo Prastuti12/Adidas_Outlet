@@ -1,9 +1,10 @@
 import React from "react";
+import '../ProductCard/productCard.css';
 
 const Filter = () => {
     return (
         <>
-            <div className=" py-6 " >
+            <div className="py-6 filter-btn" >
                 <div className="container mx-auto px-12 text-center flex  justify-end gap-5">
 
                     <button className="border-black-200 text-black py-3 px-8 font-bold  transition duration-300" style={{textTransform:"uppercase", fontSize:"14px", border:"1px solid black"}}>

@@ -1,82 +1,125 @@
-.Product:hover{
-border: 1px solid;
+.Product:hover {
+  border: 1px solid;
 }
 
-.Product:hover .variations{
+.Product:hover .variations {
   display: flex;
 }
 
-.Product{
+.Product {
   border: 1px solid transparent;
 }
 
-.Product img{
-    width:100%;
-    height:285px;
-    object-fit: fill;
+.Product img {
+  width: 100%;
+  height: 285px;
+  object-fit: fill;
 }
 
-.variations{
+.variations {
   display: none;
 }
 
-.variations img{
-  width:20%;
+.variations img {
+  width: 20%;
   height: 10%;
 }
 
-.product-list{
+.product-list {
   display: contents;
 }
-.product-details{
-    padding:0px 8px;
+
+.product-details {
+  padding: 0px 8px;
 }
+
 .product-price {
-    font-size: 15px;
-    font-weight: bold;
-    color: #e53935;
-    margin: 5px 0px;
+  font-size: 15px;
+  font-weight: bold;
+  color: #e53935;
+  margin: 5px 0px;
+}
+
+.filter-btn {
+  display: initial;
+}
+
+
+
+
+
+.discount {
+  text-decoration: line-through;
+  color: #757575;
+
+}
+
+.discount-percentage {
+  color: #e53935;
+  font-size: 0.9rem;
+}
+
+.original-price {
+  color: #757575;
+  font-size: 0.9rem;
+}
+
+.product-name {
+  margin: 0;
+  padding: 10px 0px 5px 0px;
+  color: #212121;
+}
+
+.original-price,
+.product-colors {
+  margin: 0;
+}
+
+.product-category,
+.product-colors,
+.hot-deal {
+  color: #757575;
+  font-size: 0.9rem;
+}
+
+.hot-deal {
+  color: #e53935;
+  font-weight: bold;
+}
+
+
+.product-details {
+  padding-bottom: 34px;
+}
+
+
+@media(max-width:768px) {
+  .product-price {
+    font-size: 12px;
   }
-  
+
   .discount {
-    text-decoration: line-through;
-    color: #757575;
-   
+    font-size: 12px;
   }
 
-  .discount-percentage {
-    color: #e53935;
-    font-size: 0.9rem;
-  }
-  
-  .original-price {
-    color: #757575;
-    font-size: 0.9rem;
-  }
-  
   .product-name {
-    margin:0;
-    padding:10px 0px 5px 0px;
-    color: #212121;
+    padding: 0;
+    font-size: 13px;
   }
 
-  .original-price, .product-colors{
-    margin: 0;
-  }
-  
-  .product-category,
-  .product-colors,
-  .hot-deal {
-    color: #757575;
-    font-size: 0.9rem;
-  }
-  
-  .hot-deal {
-    color: #e53935;
-    font-weight: bold;
+  .product-type {
+    font-size: 13px;
   }
 
-
-  .product-details{
-    padding-bottom: 34px;
+  .Product img {
+    height: 170px;
   }
+
+  .product-details {
+    padding: 0 8px;
+  }
+
+  .filter-btn {
+    display: none;
+  }
+}

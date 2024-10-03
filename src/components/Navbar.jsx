@@ -12,6 +12,7 @@ import Cricket from './assets/cricket.png'
 import Collaboration from './assets/Collaboration.jpg'
 import Originals from './assets/originals.jpg'
 import Logo from './assets/logo.png'
+import In from './assets/in.svg'
 
 function Navbar() {
   const [vibrate, setVibrate] = useState(false);
@@ -23,6 +24,13 @@ function Navbar() {
 
     return () => clearInterval(interval); // Cleanup interval on unmount
   }, []);
+
+  const [menuOpen, setMenuOpen] = useState(false);
+
+  // Toggle function for the menu
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
+  };
   return (
     <>
       <header>
@@ -516,20 +524,57 @@ function Navbar() {
         <nav className="mobile-nav">
           <div className="mobile-icons">
             <div style={{ display: 'flex', alignItems: 'center', gap: '25px' }}>
-              <a href="#"><i className="ri-menu-line"></i></a>
+              <a href="#" onClick={toggleMenu}>
+                <i className="ri-menu-line"></i>
+              </a>
               <a href="#"><i className="ri-heart-line"></i></a>
             </div>
             <div style={{ display: 'flex', alignItems: 'center', gap: '30px' }}>
               <a href="#"><img src={Logo} alt="Logo" /></a>
               <a href="#">
                 <i className="ri-user-3-line"></i>
-                <span className={`notification ${vibrate ? 'vibrate' : ''}`}>1</span>
+                <span className="notification">1</span>
               </a>
               <a href="#"><i className="ri-search-line"></i></a>
               <a href="#"><i className="ri-shopping-bag-line"></i></a>
             </div>
           </div>
         </nav>
+
+        {/* Mobile Menu */}
+        <div className={`mobile-menu ${menuOpen ? 'open' : ''}`}>
+          <div>
+            <div className='flex justify-between menuheader'>
+              <a href=""></a>
+              <a href="#"><img src={Logo} alt="Logo" width={60} /></a>
+              <a href="#" onClick={toggleMenu}>
+                <i className="ri-close-line text-3xl"></i>
+              </a>
+            </div>
+            <ul>
+              <li><a href="#" className='font-bold'>Men</a><i class="ri-arrow-right-s-line"></i></li>
+              <li><a href="#" className='font-bold'>Women</a><i class="ri-arrow-right-s-line"></i></li>
+              <li><a href="#" className='font-bold'>Kids</a><i class="ri-arrow-right-s-line"></i></li>
+              <li><a href="#" className='font-bold'>Personalizable Products</a></li>
+              <li><a href="#">Sports</a><i class="ri-arrow-right-s-line"></i></li>
+              <li><a href="#">Lifestyle</a><i class="ri-arrow-right-s-line"></i></li>
+              <li><a href="#">Yeezy</a><i class="ri-arrow-right-s-line"></i></li>
+              <li><a href="#" className='font-bold'>Sale</a><i class="ri-arrow-right-s-line"></i></li>
+            </ul>
+            <ul className="mobile-menu-footer">
+              <li><a href="#">Order Tracker</a></li>
+              <li><a href="#">My Profile</a></li>
+              <li><a href="#">Store Finder</a></li>
+              <li><a href="#">Help & Customer Service</a></li>
+              <li><a href="#">Returns</a></li>
+              <li><a href="#">Signup</a></li>
+            </ul>
+          </div>
+          <div className='footerBottom flex gap-x-4 p-4'>
+            <img src={In} alt="" width={40} />
+            <span>India</span>
+          </div>
+        </div>
       </header>
     </>
   );

@@ -1,16 +1,18 @@
 import React from "react";
+import '../../App.css'
 
 const Footer = () => {
     return (
         <>
             <footer>
                 {/* Top Yellow Section */}
+                <div className="bg-gray-800 flex px-6 py-4 justify-evenly block sm:hidden">
+                    <h2 className="text-white font-semibold">LOGIN</h2>
+                    <h2 className="text-white font-semibold">YOUR BAG(0)</h2>
+                </div>
                 <div className=" py-6 " style={{ backgroundColor: "#ede734" }}>
-                    <div className="container mx-auto px-4 text-center flex justify-center gap-5">
-                        <h2 className="text-2xl font-bold mb-4">JOIN ADIDAS AND GET 15% OFF</h2>
-                        {/* <button className="bg-black text-white py-3 px-8 font-bold hover:bg-gray-800 transition duration-300">
-                            SIGN UP FOR FREE →
-                        </button> */}
+                    <div className="container mx-auto  px-20 sm:px-4 text-center block  sm:flex items-center justify-center gap-5">
+                        <h2 className="text-2xl font-bold mb-4 sm:mb-0 ">JOIN ADIDAS AND GET 15% OFF</h2>
                         <a href="#_" class="relative inline-flex items-center justify-center px-6 py-3 text-lg font-medium tracking-tighter text-white bg-black  group" style={{ scale: "0.89" }}>
                             <span
                                 className="absolute inset-0 w-full h-full mt-1 ml-1 transition-all duration-300 ease-in-out bg-gray-900  group-hover:mt-0 group-hover:ml-0"
@@ -21,7 +23,7 @@ const Footer = () => {
                                 }}
                             ></span>
 
-                            <span class="absolute inset-0 w-full h-full bg-black  "></span>
+                            <span class="absolute inset-0 w-full h-full bg-black "></span>
                             <span class="absolute inset-0 w-full h-full transition-all duration-200 ease-in-out delay-100 bg-gray-900  opacity-0 group-hover:opacity-100 "></span>
                             <span class="relative text-white transition-colors duration-200 ease-in-out delay-100 group-hover:text-gray-300">SIGN UP FOR FREE →</span>
                         </a>
@@ -30,7 +32,7 @@ const Footer = () => {
                 </div>
 
                 {/* White Section for Links with custom padding */}
-                <div className="bg-white py-12 sm:px-0 lg:px-56 lg:pt-14">
+                <div className="bg-white py-12 sm:px-0 lg:px-56 lg:pt-14 hidden sm:block" >
                     <div className="container mx-auto px-4 grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8 text-sm text-left" style={{ scale: "0.89" }}>
                         {/* Products */}
                         <div>
@@ -122,19 +124,41 @@ const Footer = () => {
                     </div>
                 </div>
 
+
+                <div class="bg-gray-800 py-4 hidden sm:block">
+                    <div class="container mx-auto flex justify-center space-x-6 text-gray-400">
+                        <a href="#" style={{ fontSize: "11px" }} class="hover:text-white">Privacy Policy</a>
+                        <span>|</span>
+                        <a href="#" style={{ fontSize: "11px" }} class="hover:text-white">Terms and Conditions</a>
+                        <span>|</span>
+                        <a href="#" style={{ fontSize: "11px" }} class="hover:text-white">Cookies</a>
+                    </div>
+                    <div class="container mx-auto text-center text-gray-400 mt-2 hover:text-white" style={{ fontSize: "12px" }}>
+                        ©2024 adidas India Marketing Pvt. Ltd
+                    </div>
+                </div>
+
+                <div className="bg-black flex justify-between text-center py-10 px-8 block sm:hidden">
+                    <div className="text-white flex flex-col gap-y-4">
+                        <p className="text-sm">Delivery</p>
+                        <p className="text-sm">Store Finder</p>
+                        <p className="text-sm">Returns & Refunds</p>
+                        <p className="text-sm">adiClub</p>
+                    </div>
+                    <div className="text-white flex flex-col gap-y-4">
+                        <p className="text-sm">Order Tracker</p>
+                        <p className="text-sm">adiClub Term and condition</p>
+                        <p className="text-sm">Help</p>
+
+                    </div>
+                </div>
+
+                <div className="footerContainerPhn text-center flex flex-col gap-y-8 py-6 text-white block sm:hidden">
+                    <p className="flex justify-evenly text-sm"><span>Privacy Policy</span><span>Terms and Condition</span></p>
+                    <p className="text-sm">Cookies</p>
+                    <p className="text-sm">©2024 adidas India Marketing Pvt. Ltd</p>
+                </div>
             </footer>
-            <div class="bg-gray-800 py-4">
-                <div class="container mx-auto flex justify-center space-x-6 text-gray-400">
-                    <a href="#" style={{ fontSize: "11px" }} class="hover:text-white">Privacy Policy</a>
-                    <span>|</span>
-                    <a href="#" style={{ fontSize: "11px" }} class="hover:text-white">Terms and Conditions</a>
-                    <span>|</span>
-                    <a href="#" style={{ fontSize: "11px" }} class="hover:text-white">Cookies</a>
-                </div>
-                <div class="container mx-auto text-center text-gray-400 mt-2 hover:text-white" style={{ fontSize: "12px" }}>
-                    ©2024 adidas India Marketing Pvt. Ltd
-                </div>
-            </div>
 
         </>
 

@@ -1,7 +1,7 @@
 import React from 'react';
 import "../Section1/section1.css";
 import CategoryCard from '../Category/categoryCard';
-
+import Settings from '../assets/settings.png'
 
 const section1 = () => {
     const cardData = [
@@ -30,11 +30,13 @@ const section1 = () => {
 
     return (
         <div className='section1'>
-            <div className='heading'>
-                <h1 className='main_heading'>Shoes, Clothing & Accessories Sale: Up to 60% <br /> Off</h1>
+            <div className='heading' style={{position:"relative"}}>
+                <h1 className='main_heading'>Shoes, Clothing & Accessories Sale: Up to  <br />60% Off</h1>
+                <span className='settingsImg' style={{position:"absolute", bottom:"35%", right:"6%"}}><img src={Settings} alt="" width={30} /></span>
+                <span className='headingNum' style={{position:"absolute",bottom: "4px",left: "32%",fontSize: "13px",color: "#7e7b7b"}}>[4522]</span>
             </div>
             <div className='cardSection' style={{
-              
+
             }}>
                 {cardData.map((card, index) => (
                     <CategoryCard key={index} image={card.image} title={card.title} />

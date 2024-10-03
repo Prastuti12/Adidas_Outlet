@@ -34,7 +34,7 @@ const ProductCard = ({ product }) => {
         <div className='product-details'>
           <p className='product-price'>{product.DiscountPrice}</p>
           <span className='discount'>{product.OriginalPrice}</span>
-          <span className='discount-percentage' style={{ margin: "10px" }}>-{product.Discount} <span className='text-gray-600'>Original Price</span></span>
+          <span className='discount-percentage' style={{ margin: "10px" }}>-{product.Discount} <span className='text-gray-600 text-xs'>Original Price</span></span>
           <p className='product-name'>{product.ProductName}</p>
           <p className='product-type'>{product.ProductType}</p>
           <p className='product-colors'>{product.colors} colours</p>

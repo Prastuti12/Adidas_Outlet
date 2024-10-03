@@ -9,7 +9,9 @@
     /* Mobile devices (up to 768px width) */
     .ProductListing{
       grid-template-columns: repeat(2, 1fr); /* Show two cards in a row */
+      padding: 22px 0;
     }
+    
   }
   
   @media (min-width: 769px) {
@@ -17,4 +19,6 @@
     .ProductListing{
       grid-template-columns: repeat(4, 1fr); /* Show four cards in a row */
     }
+
+    
   }
